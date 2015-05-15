@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="jgotorblFP.jnlp">
+  <information>
+    <title>jgotorblFP</title>
+    <vendor>Jaime</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <jfx:javafx-runtime version="8.0+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
+  </resources>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib/FirstPreloader.jar" size="2517" download="progress" />
+    <jar href="jgotorblFP.jar" size="26937" download="eager" />
+    <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="jgotorblFP" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="edu.iit.sat.itmd510.jgotorbl.test.JgotorblFP"  name="jgotorblFP"  preloader-class="firstpreloader.FirstPreloader"/>
+  <update check="always"/>
+</jnlp>

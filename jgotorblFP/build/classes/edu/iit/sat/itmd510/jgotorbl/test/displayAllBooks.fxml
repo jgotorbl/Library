@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.iit.sat.itmd510.jgotorbl.test.FXMLDocumentController">
+    <children>
+        <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0">
+                    <children>
+                        <TableView fx:id="bksTable" editable="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columns>
+                                <TableColumn fx:id="colBookId" text="Book ID" prefWidth="80.0">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="id" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn fx:id="colName" text="Name" prefWidth="170.0">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="name" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn fx:id="colAuthor" text="Author" prefWidth="170.0">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="author" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn fx:id="colPrice" text="Price" prefWidth="80.0">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="price" />
+                                    </cellValueFactory>
+                                </TableColumn>  
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Label layoutX="104.0" layoutY="51.0" text="Person Details" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                        <GridPane layoutX="43.0" layoutY="104.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="ID" />
+                                <Label text="Name" GridPane.rowIndex="1" />
+                                <Label text="Author" GridPane.rowIndex="2" />
+                                <Label text="Price" GridPane.rowIndex="3" />                                
+                                <Label fx:id="idLabel" text="" GridPane.columnIndex="1" />
+                                <Label fx:id="nameLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label fx:id="authorLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <Label fx:id="priceLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                            </children>
+                        </GridPane>
+                        <ButtonBar layoutX="54.0" layoutY="250.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">   
+                            <buttons>
+                                <Button mnemonicParsing="false" onAction="#handleNewButtonAction" text="Create" />
+                                <Button mnemonicParsing="false" onAction="#handleReadButtonAction" text="Read" />
+                                <Button mnemonicParsing="false" onAction="#handleEditButtonAction" text="Update" />
+                                <Button mnemonicParsing="false" onAction="#handleDeleteButtonAction" text="Delete" />
+                            </buttons>    
+                        </ButtonBar>
+                    </children>
+                </AnchorPane>             
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
